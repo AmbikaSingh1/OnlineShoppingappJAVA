@@ -11,12 +11,12 @@ package connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class MyConnectio {
+public class MyConnection {
        public static Connection getConnection(){
 Connection con=null;
 try{
 Class.forName("com.mysql.cj.jdbc.Driver");
-con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shopping_db");
+con=DriverManager.getConnection("jdbc:mysql://localhost:8080/shopping_db");
 }
 catch(Exception ex){
     System.out.println("Connection Error : "+ ex.getMessage());
